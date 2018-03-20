@@ -29,21 +29,22 @@ class Palyndrome {
     //   }
     // ici c'est nous ---------
 
-    let analyse = this.mot.split("");
-    //   .replace(/ /g, "")
-    //   .toLowerCase()
-    //   .split("");
+    let analyse = this.mot
+      .replace(/ /g, "")
+      .toLowerCase()
+      .split("");
 
-    const tableauReal = analyse
-      .map(e => e.toLowerCase())
-      .filter(f => f !== " ");
+    // const tableauReal = analyse
+    //   .map(e => e.toLowerCase())
+    //   .filter(f => f !== " ");
 
-    console.log(tableauReal, analyse);
+    // console.log(tableauReal, analyse);
 
     const save = [...analyse].join("");
     const resultat = analyse.reverse().join("");
     analyse = analyse.join("");
 
+    console.log(resultat === save);
     return resultat === save;
 
     // if (resultat === save) {
